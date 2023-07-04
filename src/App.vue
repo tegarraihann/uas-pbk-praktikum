@@ -1,30 +1,55 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
-</template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+    <div id="app">
+      <header>
+        <nav>
+          <ul>
+            <li><router-link to="/">Weather</router-link></li>
+            <li><router-link to="/location">Location</router-link></li>
+            <li><router-link to="/stopwatch">Stopwatch</router-link></li>
+            <li><router-link to="/widgetberita">Berita Terkini</router-link></li>
+            <li><router-link to="/transaksi">Pencatatan Keuangan</router-link></li>
+          </ul>
+        </nav>
+      </header>
+      <router-view></router-view>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'App',
+  };
+  </script>
+  
+  <style>
+  #app {
+    text-align: center;
+  }
+  
+  header {
+    background: #333;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  </style>
+  
